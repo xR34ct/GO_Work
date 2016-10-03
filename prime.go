@@ -9,31 +9,34 @@ func main() {
 	fmt.Print("Enter number: ")
     fmt.Scan(&num)
 
-    list := make([]int, num)
+    list := make([]int, num-1)
 
-    for p := 1; p <= num; p++ {
+    for p := 1; p < num-1; p++ {
     	list[p] = p
     }
 
-    for cp := 1; cp <= int(math.Sqrt(float64(num))); cp++ {
-    	
+
+
+    for cp := 2; cp <= int(math.Sqrt(float64(num))); cp++ {
     	if list[cp] != 0 {
-    		
-    		for p := cp+1; p < num; p++ {
-
-    			if list[p]%cp == 0 {
-
+    		for p := cp+1; p < num-1; p++ {
+    			if list[p]%(cp) == 0 {
     				list[p] = 0
     			}
     		}
     	}
     }
 
-    for IsPrime(num) == false {
+    list[1] = 0
 
-    	for p := 1; p <= num; p++ {
-
+    P := 1
+    for p := 1; p < num-1; p++ {
+    	if list[p] != 0 {
+    		fmt.Print("Prime #")
+    		fmt.Print(P)
+    		fmt.Print(" = ")
     		fmt.Println(list[p])
+    		P++
     	}
     }
 
