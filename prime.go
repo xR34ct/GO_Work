@@ -47,7 +47,7 @@ func IsPrime(num int) (bool) {
 	} else if num == 2 {
 		return true
 	} else {
-		for c := 2: c < num-1; c++ {
+		for c := 2; c < num-1; c++ {
 			if num%c == 0 {
 				return false
 			}
