@@ -11,17 +11,17 @@ func main() {
 	fmt.Print("Enter number: ")
     fmt.Scan(&num)
 
-    var list[num-1] int64
+    var list[num] int64
 
-    for p := 2; p <= num {
+    for p := 1; p <= num; p++ {
     	list[p] = p
     }
 
-    for cp := 2; cp <= int(math.sqrt(float(num))) {
+    for cp := 1; cp <= int(math.sqrt(float(num))); cp++ {
     	
     	if list[cp] != 0 {
     		
-    		for p := cp+1; p < num {
+    		for p := cp+1; p < num; p++ {
 
     			if list[p]%cp == 0 {
 
@@ -33,7 +33,7 @@ func main() {
 
     for IsPrime(num) == false {
 
-    	for p := 2; p <= num {
+    	for p := 1; p <= num; p++ {
 
     		fmt.Println(list[p])
     	}
@@ -49,7 +49,7 @@ func IsPrime(num int) (bool) {
 	} else if num == 2 {
 		return true
 	} else {
-		for c := 2: c < num-1 {
+		for c := 2: c < num-1; c++ {
 			if num%c == 0 {
 				return false
 			}
