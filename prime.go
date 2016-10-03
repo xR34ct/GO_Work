@@ -4,18 +4,18 @@ import "math"
 
 func main() {
 
-	var num int64
+	var num int
 
 	fmt.Print("Enter number: ")
     fmt.Scan(&num)
 
-    var list[num] int64
+    list := make([]int, num)
 
     for p := 1; p <= num; p++ {
     	list[p] = p
     }
 
-    for cp := 1; cp <= int(math.Sqrt(float(num))); cp++ {
+    for cp := 1; cp <= int(math.Sqrt(float64(num))); cp++ {
     	
     	if list[cp] != 0 {
     		
