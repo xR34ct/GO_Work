@@ -15,7 +15,7 @@ func main() {
     	list[p] = p
     }
 
-    for cp := 1; cp <= int(math.sqrt(float(num))); cp++ {
+    for cp := 1; cp <= int(math.Sqrt(float(num))); cp++ {
     	
     	if list[cp] != 0 {
     		
