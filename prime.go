@@ -60,7 +60,6 @@ func CalcPrimes1(num int, list []int) {
 
 	var sqrt int
 	sqrt = int(math.Sqrt(float64(num)))
-	//fmt.Println(sqrt)
 
 	for cp := 2; cp <= sqrt; cp++ {
 		if list[cp] != 0 {
@@ -105,13 +104,8 @@ func ListPrimes(num int, list []int) {
 			buffer.WriteString(" = ")
 			buffer.WriteString(strconv.Itoa(list[p]))
 			buffer.WriteString("\n")
-			/*fmt.Print("Prime #")
-			fmt.Print(P)
-			fmt.Print(" = ")
-			fmt.Println(list[p])*/
 		}
 	}
-	fmt.Println(P)
 	write(os.O_APPEND|os.O_RDWR, buffer.String())
 }
 
