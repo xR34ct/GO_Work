@@ -114,6 +114,7 @@ func ListPrimes(num int, list []int) {
 	fmt.Println(P)
 	write(os.O_APPEND|os.O_RDWR, buffer.String())
 }
+
 func write(flag int, text string) {
 	f, err := os.OpenFile(file, flag, 0666)
 	if err != nil {
