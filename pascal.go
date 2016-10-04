@@ -42,7 +42,7 @@ func main() {
 	start := time.Now()
 	fmt.Println(PascalCalc(row, place))
 	elapsed := time.Since(start)
-	fmt.Println("Såll", elapsed)
+	fmt.Println("Time:", elapsed)
 }
 
 func PascalCalc(r, p int) int64 { //Recursive function to calculate the number in Pascal's triangle
